@@ -1,8 +1,30 @@
 services:
   - type: web
     name: backend
-    runtime: docker
-    dockerfilePath: Dockerfile
+    runtime: python
+    pythonVersion: "3.12"
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHON_VERSION
-        value: "3.12.7"
+        value: "3.12.0"
+      - key: CARGO_HOME
+        value: "/tmp/cargo"
+      - key: MONGODB_URL
+        sync: false
+      - key: DATABASE_NAME
+        sync: false
+      - key: JWT_SECRET_KEY
+        sync: false
+      - key: JWT_REFRESH_SECRET_KEY
+        sync: false
+      - key: JWT_ALGORITHM
+        value: "HS256"
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: "30"
+      - key: REFRESH_TOKEN_EXPIRE_DAYS
+        value: "7"
+      - key: CORS_ORIGINS
+        sync: false
+      - key: ENVIRONMENT
+        value: "production"
