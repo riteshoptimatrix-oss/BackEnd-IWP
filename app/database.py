@@ -1,13 +1,27 @@
 from motor.motor_asyncio import AsyncIOMotorClient, AsyncIOMotorDatabase
 from app.config import settings
+from urllib.parse import quote_plus
 
 client: AsyncIOMotorClient = None
 database: AsyncIOMotorDatabase = None
 
 
+def _encode_mongo_url(url: str) -> str:
+    if "@" not in url or "://" not in url:
+        return url
+    prefix = url.split("://")[0] + "://"
+    remainder = url[len(prefix):]
+    if "@" in remainder:
+        auth, host = remainder.rsplit("@", 1)
+        if ":" in auth:
+            user, password = auth.split(":", 1)
+            return f"{prefix}{quote_plus(user)}:{quote_plus(password)}@{host}"
+    return url
+
+
 async def connect_db():
     global client, database
-    client = AsyncIOMotorClient(settings.MONGODB_URL)
+    client = AsyncIOMotorClient(_encode_mongo_url(settings.MONGODB_URL))
     database = client[settings.DATABASE_NAME]
     await database.users.create_index("email", unique=True)
     await database.users.create_index("role")
