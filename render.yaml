@@ -13,7 +13,7 @@ services:
       - key: MONGODB_URL
         sync: false
       - key: DATABASE_NAME
-        sync: false
+        value: indiawebprogrammers
       - key: JWT_SECRET_KEY
         sync: false
       - key: JWT_REFRESH_SECRET_KEY
@@ -25,6 +25,14 @@ services:
       - key: REFRESH_TOKEN_EXPIRE_DAYS
         value: "7"
       - key: CORS_ORIGINS
-        sync: false
+        value: "https://indiawebprogrammers.com,https://www.indiawebprogrammers.com"
       - key: ENVIRONMENT
         value: "production"
+      - key: HOST
+        value: "0.0.0.0"
+      - key: PORT
+        value: "8000"
+      - key: DEBUG
+        value: "false"
+      - key: LOG_LEVEL
+        value: "INFO"
