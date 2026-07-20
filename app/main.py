@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.config import settings
 from app.database import connect_db, close_db
-from app.routers import auth, users, health, codesprint, gamification, admin
+from app.routers import auth, users, health, codesprint, gamification, admin, syntax_match, tech_logo_match, tech_logo_match_admin
 
 
 @asynccontextmanager
@@ -36,6 +36,9 @@ app.include_router(users.router, prefix="/api")
 app.include_router(codesprint.router, prefix="/api")
 app.include_router(gamification.router, prefix="/api")
 app.include_router(admin.router, prefix="/api")
+app.include_router(syntax_match.router, prefix="/api")
+app.include_router(tech_logo_match.router, prefix="/api")
+app.include_router(tech_logo_match_admin.router, prefix="/api")
 
 
 @app.get("/")

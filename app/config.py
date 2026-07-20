@@ -11,13 +11,13 @@ class Settings(BaseSettings):
     JWT_ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
     REFRESH_TOKEN_EXPIRE_DAYS: int = 7
-    CORS_ORIGINS: str = '["https://starlit-baklava-a60e24.netlify.app"]'
+    CORS_ORIGINS: str = '["http://localhost:3000"]'
     ENVIRONMENT: str = "development"
 
     @property
     def cors_origins_list(self) -> List[str]:
         if not self.CORS_ORIGINS:
-            return ["https://starlit-baklava-a60e24.netlify.app"]
+            return ["http://localhost:3000"]
         return json.loads(self.CORS_ORIGINS)
 
     class Config:

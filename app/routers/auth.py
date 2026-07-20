@@ -1,6 +1,7 @@
 import secrets
 from datetime import datetime
 from fastapi import APIRouter, HTTPException, Response, Request, Depends
+from app.config import settings
 from app.schemas.auth import (
     RegisterRequest, LoginRequest, ForgotPasswordRequest,
     ResetPasswordRequest, RefreshTokenRequest, MessageResponse,
@@ -52,7 +53,7 @@ async def login(body: LoginRequest, response: Response, request: Request):
             key="refresh_token",
             value=result["refresh_token"],
             httponly=True,
-            secure=True,
+            secure=settings.ENVIRONMENT == "production",
             samesite="lax",
             max_age=7 * 24 * 60 * 60,
             path="/",
