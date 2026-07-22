@@ -1,0 +1,16 @@
+{
+  "name": "RadheDispoWorld",
+  "short_name": "RadheDispoWo",
+  "description": "RadheDispoWorld provides industry-leading E-Commerce &amp; Retail solutions. Paper Cups Manufacturing",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "assets/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

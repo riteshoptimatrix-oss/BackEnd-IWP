@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{hero_title}} - {{company_name}} Real Estate</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="{{theme_class}}">
+  <header>
+    <div class="logo">{{logo_html}} <span>{{company_name}} Real Estate</span></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="properties.html">Properties</a></li>
+        <li><a href="tour.html">Schedule Tour</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Property Search Hero Section -->
+  <section class="hero" style="background:linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.7)), url('assets/images/realestate-hero.jpg') center/cover; color:#fff; text-align:center; padding:6rem 2rem;">
+    <div class="container">
+      <span style="display:inline-block; padding:0.4rem 1rem; border-radius:20px; background:rgba(255,255,255,0.2); font-size:0.85rem; font-weight:bold; margin-bottom:1rem;">🏡 Premium Residential & Commercial Developments</span>
+      <h1 style="font-size:3.2rem; font-weight:900;">{{hero_title}}</h1>
+      <p style="font-size:1.2rem; max-width:700px; margin:1rem auto;">{{hero_subtitle}}</p>
+      
+      <!-- Property Search Bar Widget -->
+      <div style="background:#fff; color:#000; padding:1rem; border-radius:12px; max-width:800px; margin:2rem auto; display:flex; flex-wrap:wrap; gap:1rem; align-items:center;">
+        <input type="text" placeholder="City or Neighborhood..." style="flex:1; padding:0.75rem; border-radius:8px; border:1px solid #ccc; min-width:200px;" />
+        <select style="flex:1; padding:0.75rem; border-radius:8px; border:1px solid #ccc; min-width:150px;">
+          <option>All Types</option>
+          <option>Apartment</option>
+          <option>Villa / House</option>
+          <option>Commercial Space</option>
+        </select>
+        <button type="button" onclick="alert('Searching real estate listings...')" style="padding:0.75rem 2rem; background:var(--accent-color); color:#fff; font-weight:bold; border:none; border-radius:8px; cursor:pointer;">Search Properties</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Listings Section -->
+  <section class="container" style="padding:4rem 2rem;">
+    <h2>Featured Property Listings</h2>
+    <p style="color:var(--text-muted);">Explore handpicked luxury properties with full specifications.</p>
+    {{property_grid_html}}
+  </section>
+
+  <!-- Real Estate Services Section -->
+  <section style="background:var(--bg-card); padding:4rem 2rem;">
+    <div class="container">
+      <h2>Real Estate Advisory & Management</h2>
+      <div class="grid">
+        {{services_cards_html}}
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="container" style="padding:4rem 2rem;">
+    <h2>About {{company_name}} Real Estate</h2>
+    <p>{{business_description}}</p>
+  </section>
+
+  <footer>
+    <p>&copy; {{year}} {{company_name}}. All rights reserved. | Contact: {{phone}}</p>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About {{company_name}}</title>
+  <meta name="description" content="Learn more about {{company_name}}">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="{{theme_class}}">
+  <header>
+    <div class="logo">
+      {{logo_html}}
+      <span>{{company_name}}</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>About {{company_name}}</h1>
+    <p style="font-size: 1.1rem; margin-top: 1rem; color: var(--text-secondary);">
+      {{business_description}}
+    </p>
+
+    <div class="grid" style="margin-top: 3rem;">
+      <div class="card">
+        <h3>Our Mission</h3>
+        <p>To deliver enterprise-grade services and innovation to our valued clients worldwide.</p>
+      </div>
+      <div class="card">
+        <h3>Category</h3>
+        <p>{{category}}</p>
+      </div>
+      <div class="card">
+        <h3>Working Hours</h3>
+        <p>{{working_hours}}</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; {{year}} {{company_name}}. All rights reserved.</p>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

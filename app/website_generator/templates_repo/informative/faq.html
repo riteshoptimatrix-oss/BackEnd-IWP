@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - {{company_name}}</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="{{theme_class}}">
+  <header>
+    <div class="logo">
+      {{logo_html}}
+      <span>{{company_name}}</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html" class="active">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Frequently Asked Questions</h1>
+    <div style="margin-top: 2rem;">
+      <div class="faq-item">
+        <h3>What services does {{company_name}} offer?</h3>
+        <p>{{business_description}}</p>
+      </div>
+      <div class="faq-item">
+        <h3>What are your operating hours?</h3>
+        <p>{{working_hours}}</p>
+      </div>
+      <div class="faq-item">
+        <h3>How can I reach support?</h3>
+        <p>You can call {{phone}} or email {{email}}.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; {{year}} {{company_name}}. All rights reserved.</p>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

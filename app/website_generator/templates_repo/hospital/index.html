@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{hero_title}} - {{company_name}}</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="{{theme_class}}">
+  <!-- Emergency Medical Banner Header -->
+  <div style="background:#dc2626; color:#fff; padding:0.5rem 1rem; text-align:center; font-size:0.85rem; font-weight:bold;">
+    🚨 24/7 Medical Emergency & Ambulance Line: {{phone}} | Immediate ICU Assistance
+  </div>
+
+  <header>
+    <div class="logo">{{logo_html}} <span>{{company_name}}</span></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="doctors.html">Doctors</a></li>
+        <li><a href="appointment.html">Book Appointment</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Departments</a></li>
+        <li><a href="contact.html">Emergency Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Medical Care Hero Section -->
+  <section class="hero" style="background:linear-gradient(135deg, #0284c7, #0369a1); color:#fff; padding:5rem 2rem;">
+    <div class="container" style="display:flex; flex-wrap:wrap; align-items:center; gap:2rem;">
+      <div style="flex:1; min-width:300px;">
+        <span style="display:inline-block; padding:0.3rem 0.8rem; border-radius:20px; background:rgba(255,255,255,0.2); font-size:0.85rem; font-weight:bold; margin-bottom:1rem;">🩺 Accredited Healthcare & Specialist Care</span>
+        <h1 style="font-size:2.8rem; font-weight:800;">{{hero_title}}</h1>
+        <p style="font-size:1.1rem; margin:1rem 0;">{{hero_subtitle}}</p>
+        <a href="appointment.html" class="btn" style="background:#fff; color:#0284c7; padding:0.85rem 2rem; border-radius:10px; font-weight:bold; display:inline-block; margin-top:1rem;">Book Doctor Appointment</a>
+      </div>
+      <div style="flex:1; min-width:300px;">
+        {{medical_appointment_form_html}}
+      </div>
+    </div>
+  </section>
+
+  <!-- Medical Departments Section -->
+  <section class="container" style="padding:4rem 2rem;">
+    <h2>Specialist Medical Departments</h2>
+    <div class="grid">
+      {{services_cards_html}}
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section style="background:var(--bg-card); padding:4rem 2rem;">
+    <div class="container">
+      <h2>About {{company_name}} Healthcare Center</h2>
+      <p>{{business_description}}</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; {{year}} {{company_name}}. All rights reserved. | Address: {{address}}</p>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -99,6 +99,15 @@ async def connect_db():
     await database.admin_notifications.create_index("created_at")
     await database.admin_notifications.create_index("is_active")
 
+    # Website Generator indexes
+    await database.generation_jobs.create_index("user_id")
+    await database.generation_jobs.create_index("status")
+    await database.generation_jobs.create_index([("user_id", 1), ("created_at", -1)])
+
+    await database.generation_history.create_index("user_id")
+    await database.generation_history.create_index("job_id")
+    await database.generation_history.create_index([("user_id", 1), ("created_at", -1)])
+
     print(f"Connected to MongoDB: {settings.DATABASE_NAME}")
 
 

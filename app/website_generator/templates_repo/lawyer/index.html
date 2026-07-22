@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{hero_title}} - {{company_name}} Law Firm</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="{{theme_class}}">
+  <header>
+    <div class="logo">{{logo_html}} <span>{{company_name}} Legal Advocates</span></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="practice_areas.html">Practice Areas</a></li>
+        <li><a href="consultation.html">Free Consultation</a></li>
+        <li><a href="about.html">About Firm</a></li>
+        <li><a href="services.html">Legal Services</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Authoritative Legal Hero Section -->
+  <section class="hero" style="background:linear-gradient(135deg, #0f172a, #1e293b); color:#fff; text-align:center; padding:6rem 2rem;">
+    <div class="container">
+      <span style="display:inline-block; padding:0.4rem 1rem; border-radius:20px; background:rgba(255,255,255,0.1); font-size:0.85rem; font-weight:bold; margin-bottom:1rem; border:1px solid rgba(255,255,255,0.2);">⚖️ Dedicated Legal Representation & Client Defense</span>
+      <h1 style="font-size:3.2rem; font-weight:800; font-family:Georgia, serif;">{{hero_title}}</h1>
+      <p style="font-size:1.2rem; max-width:750px; margin:1.5rem auto; opacity:0.9;">{{hero_subtitle}}</p>
+      <div style="margin-top:2rem;">
+        <a href="consultation.html" class="btn" style="background:#d97706; color:#fff; padding:0.9rem 2.2rem; border-radius:8px; font-weight:bold; font-size:1rem;">Request Free Case Evaluation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Verdicts & Success Stats Counter -->
+  <section style="background:#1e293b; color:#fff; padding:2rem 1rem; text-align:center;">
+    <div class="container" style="display:flex; justify-content:space-around; flex-wrap:wrap; gap:1.5rem;">
+      <div>
+        <h3 style="font-size:2.2rem; color:#f59e0b; margin:0;">98.4%</h3>
+        <p style="font-size:0.85rem; opacity:0.8;">Case Success Verdicts</p>
+      </div>
+      <div>
+        <h3 style="font-size:2.2rem; color:#f59e0b; margin:0;">$50M+</h3>
+        <p style="font-size:0.85rem; opacity:0.8;">Recovered for Clients</p>
+      </div>
+      <div>
+        <h3 style="font-size:2.2rem; color:#f59e0b; margin:0;">25+ Years</h3>
+        <p style="font-size:0.85rem; opacity:0.8;">Legal Practice Experience</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practice Areas Section -->
+  <section class="container" style="padding:4rem 2rem;">
+    <h2>Legal Practice Areas</h2>
+    <div class="grid">
+      {{services_cards_html}}
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section style="background:var(--bg-card); padding:4rem 2rem;">
+    <div class="container">
+      <h2>About {{company_name}}</h2>
+      <p>{{business_description}}</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; {{year}} {{company_name}} Law Firm. All rights reserved. | Confidential Line: {{phone}}</p>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

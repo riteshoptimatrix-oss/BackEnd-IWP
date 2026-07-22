@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{company_name}} - Business Home</title>
+  <meta name="description" content="{{business_description}}">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body className="{{theme_class}}">
+  <header>
+    <div className="logo">
+      {{logo_html}}
+      <span>{{company_name}}</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" className="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section className="hero">
+    <h1>{{hero_title}}</h1>
+    <p>{{hero_subtitle}}</p>
+    <a href="contact.html" className="btn">Get Started</a>
+  </section>
+
+  <main className="container">
+    <h2>Our Core Offerings</h2>
+    <div className="grid">
+      {{services_cards_html}}
+    </div>
+
+    <section style="margin-top: 4rem;">
+      <h2>Key Business Features</h2>
+      <div className="grid">
+        {{features_cards_html}}
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; {{year}} {{company_name}}. All rights reserved. | Working Hours: {{working_hours}}</p>
+    <div style="margin-top: 0.5rem;">
+      {{social_links_html}}
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

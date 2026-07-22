@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{hero_title}} - {{company_name}} Tech</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="{{theme_class}}">
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        {{logo_html}}
+        <span>{{company_name}} Tech</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="case_studies.html">Case Studies</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Engineering</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- SaaS Tech Hero Section -->
+  <section class="hero" style="background:linear-gradient(135deg, #0f172a, #1e1b4b); color:#fff;">
+    <div class="container">
+      <span style="display:inline-block; padding:0.4rem 1rem; border-radius:20px; background:rgba(255,255,255,0.1); font-size:0.85rem; font-weight:bold; margin-bottom:1rem; border: 1px solid rgba(255,255,255,0.2);">⚡ Enterprise Cloud Platform & Custom Software Engineering</span>
+      <h1 style="color:#fff; font-size:clamp(3rem, 6vw, 4.5rem);">{{hero_title}}</h1>
+      <p style="color:#cbd5e1; font-size:1.2rem; max-width:700px; margin:1.5rem auto;">{{hero_subtitle}}</p>
+      <div style="margin-top:2.5rem; display:flex; justify-content:center; gap:1rem;">
+        <a href="{{hero_cta_link}}" class="btn btn-primary" style="padding:0.85rem 2.5rem; box-shadow:0 0 20px rgba(37,99,235,0.4);">{{hero_cta_text}}</a>
+        <a href="solutions.html" class="btn" style="background:rgba(255,255,255,0.1); color:#fff; padding:0.85rem 2.5rem; backdrop-filter:blur(4px); border:1px solid rgba(255,255,255,0.2);">View API Docs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Code Snippet / API Integration Section -->
+  <section class="container">
+    <div style="text-align:center; margin-bottom:3rem;">
+      <h2>Developer-First API Architecture</h2>
+      <p style="color:var(--text-muted); max-width:600px; margin:0 auto;">Integrate in minutes with simple RESTful API endpoints and robust SDKs built for enterprise scale.</p>
+    </div>
+    <div style="max-width:800px; margin:0 auto;">
+      {{code_snippet_html}}
+    </div>
+  </section>
+
+  <!-- Core Engineering Solutions Section -->
+  <section style="background:var(--bg-secondary); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:3rem;">
+        <h2>Engineering Services & Capabilities</h2>
+        <p style="color:var(--text-muted); max-width:600px; margin:0 auto;">Leverage our top-tier engineering talent to build, scale, and maintain mission-critical infrastructure.</p>
+      </div>
+      <div class="grid">
+        {{services_cards_html}}
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="container">
+    <div style="text-align:center; margin-bottom:3rem;">
+      <h2>About {{company_name}} Software</h2>
+      <p style="color:var(--text-muted); max-width:800px; margin:0 auto;">{{business_description}}</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; {{year}} {{company_name}}. All rights reserved. | Contact: {{email}}</p>
+      <div style="margin-top:1rem;">{{footer_slogan}}</div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
